@@ -51,7 +51,7 @@ export function NavComponent() {
         <header className="container mx-auto px-4 sm:px-8 py-6 flex items-center justify-between">
             <div className="flex items-center space-x-8">
                 <Link href="/" className="text-2xl font-bold">
-                    Delulu
+                    Solipsis
                 </Link>
                 <nav className="hidden md:flex space-x-6">
                     <Link href="/productos" className="text-gray-600 hover:text-gray-900">Productos</Link>
@@ -72,7 +72,7 @@ export function NavComponent() {
                                 <Link href="/productos" className="text-gray-600 hover:text-gray-900">Productos</Link>
                                 <Link href="/soluciones" className="text-gray-600 hover:text-gray-900">Soluciones</Link>
                                 <Link href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link>
-                                <Link href="/nosotros" className="text-gray-600 hover:text-gray-900">Sobre Delulu</Link>
+                                <Link href="/nosotros" className="text-gray-600 hover:text-gray-900">Sobre Solipsis</Link>
                                 <Link href="/contacto" className="text-gray-600 hover:text-gray-900">Contacto</Link>
                                 <Link href="/login" className="text-gray-600 hover:text-gray-900 justify-start">Iniciar Sesión</Link>
                                 <Link href="/register" className="text-gray-600 hover:text-gray-900 justify-start">Registrarse</Link>

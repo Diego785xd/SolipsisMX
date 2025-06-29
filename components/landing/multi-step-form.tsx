@@ -80,7 +80,7 @@ function Step1() {
     <div className="space-y-4 ">
       <Button variant="outline" className='text-sm'> <MoveLeft /> Regresar al inicio </Button>
       <h2 className="text-2xl font-bold text-center">Crea tu cuenta</h2>
-      <p className='text-lg text-center text-gray-500'>Este será tu acceso a todos los servicios de la plataforma Delulu</p>
+      <p className='text-lg text-center text-gray-500'>Este será tu acceso a todos los servicios de la plataforma Solipsis</p>
       <div className="space-y-2">
         <Label htmlFor="email">Correo Electronico</Label>
         <Input id="email" placeholder="Correo Electronico" />
@@ -107,11 +107,11 @@ function Step1() {
       <div className='flex flex-col gap-6'>
         <div className='flex flex-row'>
           <Input type='checkbox' id='terms' className='w-4 h-4 mr-4' />
-          <Label htmlFor='terms'>Acepto los <Link href='#' className='text-blue-600 underline'> Términos, Condiciones</Link> y el <Link href='#' className='text-blue-600 underline'> Aviso de Privacidad para Clientes y Prospectos </Link> de Delulu</Label>
+          <Label htmlFor='terms'>Acepto los <Link href='#' className='text-blue-600 underline'> Términos, Condiciones</Link> y el <Link href='#' className='text-blue-600 underline'> Aviso de Privacidad para Clientes y Prospectos </Link> de Solipsis</Label>
         </div>
         <div className='flex flex-row'>
           <Input type='checkbox' id='marketing' className='w-4 h-4 mr-4' />
-          <Label htmlFor='marketing'>Autorizo que Delulu me envíe publicidad y comunicados a través de correo y otros medios</Label>
+          <Label htmlFor='marketing'>Autorizo que Solipsis me envíe publicidad y comunicados a través de correo y otros medios</Label>
         </div>
       </div>
     </div>

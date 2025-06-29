@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0 w-full md:w-1/2 pb-4 md:pb-0">
             <Link href="/" className="text-2xl font-bold text-black">
-              Delulu
+              Solipsis
               <span className="bg-primary h-1 w-12 block mt-1"></span>
             </Link>
             <p className="mt-2">Copyright © 2024 Every Labs</p>
@@ -25,9 +25,9 @@ export default function Footer() {
               <Link href="/refund-policy" className="block hover:text-primary">Política de Reembolso</Link>
             </div>
             <div>
-              <a href="https://twitter.com/delulu" target="_blank" rel="noopener noreferrer" className="block mb-2 hover:text-primary">Twitter</a>
-              <a href="https://linkedin.com/company/delulu" target="_blank" rel="noopener noreferrer" className="block mb-2 hover:text-primary">LinkedIn</a>
-              <a href="https://github.com/delulu" target="_blank" rel="noopener noreferrer" className="block hover:text-primary">GitHub</a>
+              <a href="https://twitter.com/solipsis" target="_blank" rel="noopener noreferrer" className="block mb-2 hover:text-primary">Twitter</a>
+              <a href="https://linkedin.com/company/solipsis" target="_blank" rel="noopener noreferrer" className="block mb-2 hover:text-primary">LinkedIn</a>
+              <a href="https://github.com/solipsis" target="_blank" rel="noopener noreferrer" className="block hover:text-primary">GitHub</a>
             </div>
           </div>
         </div>

@@ -1,22 +1,25 @@
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 
+const videos = [
+  {
+    videoSrc: "/videos/prueba.mp4",
+    title: "Video 1",
+  },
+  {
+    videoSrc: "/videos/prueba2.mp4",
+    title: "Video 2",
+  },
+  {
+    videoSrc: "/videos/prueba.mp4",
+    title: "Video 3",
+  },
+  {
+    videoSrc: "/videos/prueba2.mp4",
+    title: "Video 4",
+  },
+];
+
 export function HeroDemo() {
-  return (
-    <div className="flex justify-center md:w-full">
-      <HeroVideoDialog
-        className="dark:hidden block"
-        animationStyle="from-center"
-        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-        thumbnailSrc="/landing/dashboard.png"
-        thumbnailAlt="Hero Video"
-      />
-      <HeroVideoDialog
-        className="hidden dark:block"
-        animationStyle="from-center"
-        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-        thumbnailSrc="/landing/dashboard.png"
-        thumbnailAlt="Hero Video"
-      />
-    </div>
-  );
+  return <HeroVideoDialog videos={videos} />;
 }
+

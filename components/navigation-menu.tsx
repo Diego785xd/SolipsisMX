@@ -16,38 +16,33 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
-const products = [
+const solutions = [
   {
-    title: "Análisis de Audio",
-    href: "/products/audio-analysis",
+    title: "Solución 1",
+    href: "/solutions/audio-analysis",
     description: "Analiza contenido de audio con técnicas avanzadas de IA.",
   },
   {
-    title: "Análisis de Sentimientos",
-    href: "/products/sentiment-analysis",
+    title: "Solución 2",
+    href: "/solutions/sentiment-analysis",
     description: "Comprende el sentimiento detrás del texto y el habla.",
   },
   {
-    title: "Detección de Intereses",
-    href: "/products/interest-detection",
+    title: "Solución 3",
+    href: "/solutions/interest-detection",
     description: "Detecta y analiza los intereses de los usuarios a partir de diversas fuentes de datos.",
-  },
-  {
-    title: "Retroalimentación Continua",
-    href: "/products/continuous-feedback",
-    description: "Implementa ciclos de retroalimentación continua en tus aplicaciones.",
   },
 ]
 
-const solutions = [
+const products = [
   {
     title: "Soluciones de Audio",
-    href: "/solutions/audio",
+    href: "/products/audio",
     description: "Soluciones integrales de procesamiento y análisis de audio.",
   },
   {
     title: "Soluciones de Video",
-    href: "/solutions/video",
+    href: "/products/video",
     description: "Capacidades avanzadas de análisis y procesamiento de video.",
   },
 ]
@@ -81,15 +76,16 @@ ListItem.displayName = "ListItem"
 export function NavMenu() {
   return (
     <div className="container mx-auto px-4">
-      <nav className="flex items-center justify-between py-4">
-        <Link href="/" className="text-3xl font-bold">
-          Delulu
+      <nav className="flex items-center py-4">
+        <Link href="/" className="flex items-center space-x-4">
+          <img src="/logo.svg" alt="Logo" className="w-auto h-14"/>
+          <span className="text-2xl font-metro-df">SOLIPSIS</span>
         </Link>
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="ml-12 flex items-center space-x-8">
           <NavigationMenu>
             <NavigationMenuList className="flex space-x-8">
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
+                <NavigationMenuTrigger className = "text-base">Soluciones</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-4">
@@ -107,22 +103,6 @@ export function NavMenu() {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    {products.map((product) => (
-                      <ListItem
-                        key={product.title}
-                        title={product.title}
-                        href={product.href}
-                      >
-                        {product.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Soluciones</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {solutions.map((solution) => (
                       <ListItem
                         key={solution.title}
@@ -135,13 +115,32 @@ export function NavMenu() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+              {/*
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {solutions.map((product) => (
+                      <ListItem
+                        key={product.title}
+                        title={product.title}
+                        href={product.href}
+                      >
+                        {product.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              */}
               <NavigationMenuItem>
                 <Link href="/blog" legacyBehavior passHref>
-                  <NavigationMenuLink className=" hover:text-gray-400 transition-colors ease-in-out duration-300">
+                  <NavigationMenuLink className=" text-m hover:text-gray-400 transition-colors ease-in-out duration-300">
                     Blog
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+              {/*
               <NavigationMenuItem>
                 <Link href="/help" legacyBehavior passHref>
                   <NavigationMenuLink className=" hover:text-gray-400 transition-colors ease-in-out duration-300">
@@ -149,18 +148,21 @@ export function NavMenu() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+              */}
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="hidden md:flex items-center space-x-4">
+        
+        {/*
+        <div className="md:flex items-center space-x-8 ml-auto">  
         <Link href="/register/email" className="bg-white text-black border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 transition-colors ease-in-out duration-300">
             Iniciar Sesión
           </Link>
           <Link href="/login" className="bg-black text-white border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 hover:text-black transition-colors ease-in-out duration-300">
             Registrarse
-          </Link>
-          
+          </Link>     
         </div>
+        */}
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
@@ -171,42 +173,45 @@ export function NavMenu() {
           <SheetContent side="top">
             <nav className="flex flex-col space-y-4">
               <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-bold">Productos</h3>
-                <Link href="/products/audio-analysis" className="text-md font-medium">
-                  Análisis de Audio
-                </Link>
-                <Link href="/products/sentiment-analysis" className="text-md font-medium">
-                  Análisis de Sentimientos
-                </Link>
-                <Link href="/products/interest-detection" className="text-md font-medium">
-                  Detección de Intereses
-                </Link>
-                <Link href="/products/continuous-feedback" className="text-md font-medium">
-                  Retroalimentación Continua
-                </Link>
-              </div>
-              <div className="flex flex-col gap-3">
                 <h3 className="text-lg font-bold">Soluciones</h3>
-                <Link href="/solutions/audio" className="text-md font-medium">
-                  Soluciones de Audio
+                <Link href="/solutions/audio-analysis" className="text-md font-medium">
+                  Solución 1
                 </Link>
-                <Link href="/solutions/video" className="text-md font-medium">
-                  Soluciones de Video
+                <Link href="/solutions/sentiment-analysis" className="text-md font-medium">
+                  Solución 2
+                </Link>
+                <Link href="/solutions/interest-detection" className="text-md font-medium">
+                  Solución 3
                 </Link>
               </div>
+              {/*
+              <div className="flex flex-col gap-3">
+                <h3 className="text-lg font-bold">Productos</h3>
+                <Link href="/products/audio" className="text-md font-medium">
+                  Producto 1
+                </Link>
+                <Link href="/products/video" className="text-md font-medium">
+                  Producto 2
+                </Link>
+              </div>
+              */}
               <Link href="/blog" className="text-lg font-semibold  hover:text-gray-400 transition-colors ease-in-out duration-300">
                 Blog
               </Link>
+              {/*}
               <Link href="/help" className="text-lg font-semibold hover:text-gray-400 transition-colors ease-in-out duration-300">
                 Ayuda
               </Link>
+              */}
               
+              {/*
               <Link href="/register/email" className="bg-white text-black border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 transition-colors ease-in-out duration-300 text-center">
                 Iniciar Sesión
               </Link>
               <Link href="/login" className="bg-black text-white border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 hover:text-black transition-colors ease-in-out duration-300 text-center">
                 Registrarse
               </Link>
+              */}
             </nav>
           </SheetContent>
         </Sheet>

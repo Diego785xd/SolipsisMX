@@ -35,7 +35,7 @@ export default function BlogPage() {
             title:
                 "Estudio de Caso: Incrementando la Satisfacción del Cliente en Concesionarios",
             description:
-                "Un análisis detallado de cómo un concesionario automotriz líder utilizó las perspectivas de Delulu para mejorar la calidad del servicio.",
+                "Un análisis detallado de cómo un concesionario automotriz líder utilizó las perspectivas de Solipsis para mejorar la calidad del servicio.",
             image: "/blog/6.jpg",
         },
     ];
@@ -44,7 +44,7 @@ export default function BlogPage() {
         {
             title: "Comprendiendo el Análisis de Sentimientos",
             description:
-                "Aprende cómo funciona la tecnología de análisis de sentimientos y cómo Delulu permite a las empresas optimizar las conversaciones con los clientes.",
+                "Aprende cómo funciona la tecnología de análisis de sentimientos y cómo Solipsis permite a las empresas optimizar las conversaciones con los clientes.",
             author: "Emily Chen, Científica de Datos",
             image: "/blog/1.webp",
         },

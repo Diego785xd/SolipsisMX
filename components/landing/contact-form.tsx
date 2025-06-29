@@ -27,7 +27,7 @@ export function ContactFormComponent() {
   }
 
   return (
-    <div className="w-full flex justify-center mt-16">
+    <div className="w-full flex justify-center mt-16 hidden"> {/*el formulario está oculto*/}
       <div className="bg-[#1b1b1b] dark:bg-white/[.06] text-white p-8 md:p-16 rounded-lg w-3/4">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16">
           <div className="md:w-1/2">

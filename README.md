@@ -1,7 +1,7 @@
 
 
 <div align="center">
-  <h1>Delulu</h1>
+  <h1>Solipsis</h1>
   <img src="https://github.com/user-attachments/assets/fcc4720f-804e-45e3-b05b-49d257c4c186" width='800px' />
   <br/>
   <br/>
@@ -20,8 +20,8 @@ Para configurar el proyecto en tu entorno local, sigue estos pasos:
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/yourusername/delulu.git
-   cd delulu
+   git clone https://github.com/yourusername/solipsis.git
+   cd solipsis
    ```
 
 2. **Instalar dependencias:**

@@ -33,12 +33,12 @@ export default function SignUpFormComponent() {
                         href='/'
                         className="ml-2 text-3xl font-bold absolute hover:text-gray-200 transition-colors duration-300 ease-out"
                     >
-                        Delulu
+                        Solipsis
                     </Link>
                 </div>
                 <div className="p-8 bottom-0 absolute">
                     <div>
-                        <p className="text-lg">&quote;Delulu nos ha ayudado a hacer de nuestra vida mucho más fácil a la hora de trabajar.&quote;</p>
+                        <p className="text-lg">&quote;Solipsis nos ha ayudado a hacer de nuestra vida mucho más fácil a la hora de trabajar.&quote;</p>
                         <p className="mt-2">Sofia Muñiz</p>
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Registrate en Delulu",
-  description: "Registrate para empezar con Delulu.",
+  title: "Registrate en Solipsis",
+  description: "Registrate para empezar con Solipsis.",
   icons: {
     icon: [
       { url: '/icons/icon.png', sizes: 'any' },

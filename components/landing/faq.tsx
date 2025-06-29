@@ -47,7 +47,7 @@ function Header() {
   return (
     <header className="bg-gradient-to-b from-purple-600 to-transparent text-white py-8 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-black mb-4">Bienvenido al centro de ayuda de Delulu</h1>
+        <h1 className="text-4xl font-black mb-4">Bienvenido al centro de ayuda de Solipsis</h1>
         <p className="text-xl mb-6">¡Hola! ¿Cómo podemos ayudar?</p>
         <div className="relative">
           <Input

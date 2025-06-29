@@ -20,14 +20,14 @@ export function BentoBox() {
         },
         'encryption': {
             title: 'Encriptación y Protección de Datos',
-            description: 'Protege toda la información recopilada con nuestros avanzados sistemas de encriptación. Delulu garantiza que los datos de tus interacciones de audio y video se mantengan seguros, cumpliendo con los más altos estándares de seguridad empresarial.',
+            description: 'Protege toda la información recopilada con nuestros avanzados sistemas de encriptación. Solipsis garantiza que los datos de tus interacciones de audio y video se mantengan seguros, cumpliendo con los más altos estándares de seguridad empresarial.',
             image: '/landing/lock.png',
             imageWidth: 247,
             imageHeight: 247
         },
         'integration': {
             title: 'Integraciones Flexibles con los Principales CRMs',
-            description: 'Delulu se integra fácilmente con los CRMs más populares de la industria, brindándote una solución sin complicaciones para sincronizar tus datos. Además, podemos adaptarnos a los sistemas personalizados de tu empresa, asegurando una implementación perfecta que se ajuste a tus necesidades operativas.',
+            description: 'Solipsis se integra fácilmente con los CRMs más populares de la industria, brindándote una solución sin complicaciones para sincronizar tus datos. Además, podemos adaptarnos a los sistemas personalizados de tu empresa, asegurando una implementación perfecta que se ajuste a tus necesidades operativas.',
             component: <IntegrationsDemo />
 
         },
@@ -37,7 +37,7 @@ export function BentoBox() {
         },
         'detection': {
             title: 'Detección Automática de Temas Relevantes',
-            description: 'Delulu analiza cada conversación y detecta automáticamente los temas más importantes, proporcionando un mapa claro de las preocupaciones y prioridades de los clientes.',
+            description: 'Solipsis analiza cada conversación y detecta automáticamente los temas más importantes, proporcionando un mapa claro de las preocupaciones y prioridades de los clientes.',
             component: <TopicDetection />
         },
         'ai': {

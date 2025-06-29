@@ -27,7 +27,7 @@ export default function LeftMenu() {
         <div>
             <aside className="md:w-64 flex-none bg-[#F9F9FC] h-screen">
                 <div className='md:ml-6 md:pt-8'>
-                    <Image src="/darkLogo.png" alt="Delulu logo" width={100} height={100} />
+                    <Image src="/darkLogo.png" alt="Solipsis logo" width={100} height={100} />
                 </div>
                 <ol className=" mt-16 ml-4">
                     {steps.map((step, index) => {

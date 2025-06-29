@@ -28,7 +28,7 @@ export default function EmailForm() {
       </Button>
       <h2 className="text-2xl font-bold text-center">Crea tu cuenta</h2>
       <p className="text-lg text-center text-gray-500">
-        Este será tu acceso a todos los servicios de la plataforma Delulu
+        Este será tu acceso a todos los servicios de la plataforma Solipsis
       </p>
       <div className="space-y-2">
         <Label htmlFor="email">Correo Electrónico</Label>
@@ -95,7 +95,7 @@ export default function EmailForm() {
             <Link href="#" className="text-blue-600 underline">
               Aviso de Privacidad para Clientes y Prospectos
             </Link>{' '}
-            de Delulu
+            de Solipsis
           </span>
         </label>
         <label htmlFor="marketing" className="flex items-start">
@@ -107,7 +107,7 @@ export default function EmailForm() {
             onChange={() => setAcceptMarketing(!acceptMarketing)}
           />
           <span>
-            Autorizo que Delulu me envíe publicidad y comunicados a través de
+            Autorizo que Solipsis me envíe publicidad y comunicados a través de
             correo y otros medios
           </span>
         </label>

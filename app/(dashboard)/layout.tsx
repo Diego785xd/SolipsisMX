@@ -15,6 +15,12 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const metroDF = localFont({
+  src: "../fonts/metro-df.ttf",
+  variable: "--font-metro-df",
+  weight: "100 900",
+});
+
 export const metadata: Metadata = {
   title: "Mi Dashboard",
   description: "Mi Dashboard",
@@ -25,10 +31,11 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (   
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${metroDF.variable} antialiased`}>
         <DashboardLayoutComponent>
           <main>
             {children}

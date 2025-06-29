@@ -16,9 +16,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const metroDF = localFont({
+  src: "../fonts/metro-df.ttf",
+  variable: "--font-metro-df",
+  weight: "100 900",
+});
+
 export const metadata: Metadata = {
-  title: "Delulu AI",
-  description: "Transforma tus interacciones con tus clientes en insights con Delulu.",
+  title: "Solipsis AI",
+  description: "Transforma tus interacciones con tus clientes en insights con Solipsis.",
   icons: {
     icon: [
       { url: '/icons/icon.png', sizes: 'any' },
@@ -33,7 +39,7 @@ export default function LandingLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col items-center`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} ${metroDF.variable} antialiased flex flex-col items-center`}>
                 <NavMenu />
                 {children}
                 <Footer />
