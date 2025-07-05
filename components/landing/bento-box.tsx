@@ -1,48 +1,48 @@
 import Image from "next/image";
 import { IntegrationsDemo } from "@/components/landing/integrations-demo";
-import TopicDetection from "@/components/landing/topicDetection";
 
 export function BentoBox() {
     const features = {
         'funnel': {
             title: 'Seguimiento Inteligente de Resolución y Progreso en tu Funnel Empresarial',
-            description: 'Mide el sentimiento de los clientes en tiempo real durante las conversaciones. Identifica emociones positivas, negativas o neutrales, permitiendo ajustar el enfoque del servicio para mejorar la satisfacción del cliente.',
+            description: 'Visualiza en tiempo real cuántas personas completan o abandonan cada etapa de tu proceso de venta gracias al reconocimiento facial y seguimiento anónimo del cliente.',
             image: '/landing/extraction.png',
             imageWidth: 700,
             imageHeight: 500
         },
         'sentiment': {
             title: 'Análisis Emocional en Tiempo Real',
-            description: 'Mide el sentimiento de los clientes en tiempo real durante las conversaciones. Identifica emociones positivas, negativas o neutrales, permitiendo ajustar el enfoque del servicio para mejorar la satisfacción del cliente.',
+            description: 'Detecta expresiones faciales y emociones durante la visualización de tus contenidos, diferenciando entre impacto positivo, indiferencia o rechazo',
             image: '/landing/sentiment-analysis.png',
             imageWidth: 500,
             imageHeight: 150
         },
         'encryption': {
             title: 'Encriptación y Protección de Datos',
-            description: 'Protege toda la información recopilada con nuestros avanzados sistemas de encriptación. Solipsis garantiza que los datos de tus interacciones de audio y video se mantengan seguros, cumpliendo con los más altos estándares de seguridad empresarial.',
+            description: 'Cumplimos con los más altos estándares de privacidad: toda la información es anonimizada y procesada localmente.',
             image: '/landing/lock.png',
             imageWidth: 247,
             imageHeight: 247
         },
         'integration': {
             title: 'Integraciones Flexibles con los Principales CRMs',
-            description: 'Solipsis se integra fácilmente con los CRMs más populares de la industria, brindándote una solución sin complicaciones para sincronizar tus datos. Además, podemos adaptarnos a los sistemas personalizados de tu empresa, asegurando una implementación perfecta que se ajuste a tus necesidades operativas.',
+            description: 'Solipsis se conecta con tus flujos de datos en Power BI, APIs propias o dashboards existentes para centralizar el análisis del comportamiento físico de tus clientes.',
             component: <IntegrationsDemo />
 
         },
         'reporting': {
             title: 'Reportes Personalizados de Rendimiento',
-            description: 'Genera reportes detallados del rendimiento de cada empleado basado en sus conversaciones con los clientes. Evalúa la efectividad, identifica áreas de mejora y reconoce a los empleados con mejor desempeño.',
+            description: 'Accede a dashboards con métricas clave por tienda, horario, pantalla y anuncio. Mide el ROI visual y ajusta campañas en tiempo real.',
         },
         'detection': {
-            title: 'Detección Automática de Temas Relevantes',
-            description: 'Solipsis analiza cada conversación y detecta automáticamente los temas más importantes, proporcionando un mapa claro de las preocupaciones y prioridades de los clientes.',
-            component: <TopicDetection />
+            title: 'Estudios Visuales Personalizados con IA',
+            description: `Transforma tus espacios físicos en fuentes inteligentes de datos. Con nuestra tecnología de Visual Transformers, lanza campañas de detección para responder preguntas clave como:
+            
+            ¿Quiénes visitan mi tienda usan ropa Lacoste? ¿Cuántos clientes llevan mochilas Nike? ¿Qué franjas demográficas interactúan más con cierto producto?`,
         },
         'ai': {
-            title: 'Resumen Instantáneo de Conversaciones',
-            description: 'Genera un resumen automático y conciso de cada interacción, destacando los puntos más relevantes. Facilita la revisión rápida de conversaciones largas, permitiendo a las empresas centrarse en la información clave.',
+            title: 'Seguimiento de Interacciones Visuales',
+            description: 'Recibe informes automáticos sobre las interacciones entre clientes y pantallas, identificando qué anuncios fueron vistos y por cuánto tiempo.',
             image: '/landing/summary.png',
             imageWidth: 490,
             imageHeight: 575
@@ -87,7 +87,7 @@ export function BentoBox() {
                             <BoxElement title={features.reporting.title} description={features.reporting.description} />
                         </div>
                         <div>
-                            <BoxElement title={features.detection.title} description={features.detection.description} component={features.detection.component} />
+                            <BoxElement title={features.detection.title} description={features.detection.description}/>
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 border-l-[1px] border-black/[.05] dark:border-white/[.06]">
@@ -108,7 +108,7 @@ function BoxElement({ title, description, image, imageWidth = 700, imageHeight =
         <div className="w-full p-12 flex flex-col items-center">
             <div className="flex flex-col items-start gap-4">
                 <h1 className=" w-full md:w-3/4 text-2xl font-semibold text-[#1B1B1B] text-center md:text-left">{title}</h1>
-                <p className=" w-full md:w-3/4 text-md font-light text-[#515151] text-center md:text-left">{description}</p>
+                <p className="w-full md:w-3/4 text-md font-light text-[#515151] text-center md:text-left whitespace-pre-line">{description}</p>
             </div>
             {image ? <Image src={image} alt={title} width={imageWidth} height={imageHeight} className="mt-16" /> : null}
 

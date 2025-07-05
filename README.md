@@ -5,7 +5,7 @@
   <img src="https://github.com/user-attachments/assets/fcc4720f-804e-45e3-b05b-49d257c4c186" width='800px' />
   <br/>
   <br/>
-  <p>Transforma interacciones en Insights con Inteligencia Artificial</p>
+  <p>Cartelería Digital Inteligente con IA y Visión Computacional en Tiempo Real</p>
   <div>
     <img src='https://img.shields.io/badge/License-MIT-yellow.svg' />
   </div>

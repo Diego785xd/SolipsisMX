@@ -3,7 +3,7 @@ import OrbitingCircles from "@/components/ui/orbiting-circles";
 export function IntegrationsDemo() {
     return (
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl mt-16">
-            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-6xl font-metro-df leading-none text-transparent dark:from-white dark:to-black">
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-5xl font-metro-df leading-none text-transparent dark:from-white dark:to-black">
                 Solipsis
             </span>
 

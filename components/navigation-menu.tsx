@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { Menu } from "lucide-react"
+import Image from 'next/image'
 
 import { cn } from "@/lib/utils"
 import {
@@ -19,7 +20,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 const solutions = [
   {
     title: "Solución 1",
-    href: "/solutions/audio-analysis",
+    href: "/solutions/solution1",
     description: "Analiza contenido de audio con técnicas avanzadas de IA.",
   },
   {
@@ -34,6 +35,7 @@ const solutions = [
   },
 ]
 
+{/*
 const products = [
   {
     title: "Soluciones de Audio",
@@ -46,6 +48,7 @@ const products = [
     description: "Capacidades avanzadas de análisis y procesamiento de video.",
   },
 ]
+*/}
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -75,13 +78,19 @@ ListItem.displayName = "ListItem"
 
 export function NavMenu() {
   return (
-    <div className="container mx-auto px-4">
-      <nav className="flex items-center py-4">
-        <Link href="/" className="flex items-center space-x-4">
-          <img src="/logo.svg" alt="Logo" className="w-auto h-14"/>
-          <span className="text-2xl font-metro-df">SOLIPSIS</span>
+  
+      <nav className="border-b border-gray-200 w-full">
+        <div className="container mx-auto px-4 flex items-center py-4">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image 
+            src="/logo.svg" 
+            alt="Logo"
+            width={64}
+            height={64} 
+            className="w-auto h-10"/>
+          <span className="text-xl font-metro-df">SOLIPSIS</span>
         </Link>
-        <div className="ml-12 flex items-center space-x-8">
+        <div className="ml-12 hidden md:flex items-center space-x-8 relative z-50">
           <NavigationMenu>
             <NavigationMenuList className="flex space-x-8">
               <NavigationMenuItem>
@@ -103,6 +112,9 @@ export function NavMenu() {
                         </a>
                       </NavigationMenuLink>
                     </li>
+                      <li>
+                        <h3 className="text-sm font-semibold text-muted-foreground uppercase px-2">Por industria</h3>
+                      </li>
                     {solutions.map((solution) => (
                       <ListItem
                         key={solution.title}
@@ -135,7 +147,7 @@ export function NavMenu() {
               */}
               <NavigationMenuItem>
                 <Link href="/blog" legacyBehavior passHref>
-                  <NavigationMenuLink className=" text-m hover:text-gray-400 transition-colors ease-in-out duration-300">
+                  <NavigationMenuLink className=" text-base hover:text-gray-400 transition-colors ease-in-out duration-300">
                     Blog
                   </NavigationMenuLink>
                 </Link>
@@ -163,59 +175,61 @@ export function NavMenu() {
           </Link>     
         </div>
         */}
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Abrir menú</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="top">
-            <nav className="flex flex-col space-y-4">
-              <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-bold">Soluciones</h3>
-                <Link href="/solutions/audio-analysis" className="text-md font-medium">
-                  Solución 1
+        <div className="ml-auto md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Abrir menú</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="top">
+              <nav className="flex flex-col space-y-4">
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-lg font-bold">Soluciones</h3>
+                  <Link href="/solutions/audio-analysis" className="text-md font-medium">
+                    Solución 1
+                  </Link>
+                  <Link href="/solutions/sentiment-analysis" className="text-md font-medium">
+                    Solución 2
+                  </Link>
+                  <Link href="/solutions/interest-detection" className="text-md font-medium">
+                    Solución 3
+                  </Link>
+                </div>
+                {/*
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-lg font-bold">Productos</h3>
+                  <Link href="/products/audio" className="text-md font-medium">
+                    Producto 1
+                  </Link>
+                  <Link href="/products/video" className="text-md font-medium">
+                    Producto 2
+                  </Link>
+                </div>
+                */}
+                <Link href="/blog" className="text-lg font-semibold  hover:text-gray-400 transition-colors ease-in-out duration-300">
+                  Blog
                 </Link>
-                <Link href="/solutions/sentiment-analysis" className="text-md font-medium">
-                  Solución 2
+                {/*}
+                <Link href="/help" className="text-lg font-semibold hover:text-gray-400 transition-colors ease-in-out duration-300">
+                  Ayuda
                 </Link>
-                <Link href="/solutions/interest-detection" className="text-md font-medium">
-                  Solución 3
+                */}
+                
+                {/*
+                <Link href="/register/email" className="bg-white text-black border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 transition-colors ease-in-out duration-300 text-center">
+                  Iniciar Sesión
                 </Link>
-              </div>
-              {/*
-              <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-bold">Productos</h3>
-                <Link href="/products/audio" className="text-md font-medium">
-                  Producto 1
+                <Link href="/login" className="bg-black text-white border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 hover:text-black transition-colors ease-in-out duration-300 text-center">
+                  Registrarse
                 </Link>
-                <Link href="/products/video" className="text-md font-medium">
-                  Producto 2
-                </Link>
-              </div>
-              */}
-              <Link href="/blog" className="text-lg font-semibold  hover:text-gray-400 transition-colors ease-in-out duration-300">
-                Blog
-              </Link>
-              {/*}
-              <Link href="/help" className="text-lg font-semibold hover:text-gray-400 transition-colors ease-in-out duration-300">
-                Ayuda
-              </Link>
-              */}
-              
-              {/*
-              <Link href="/register/email" className="bg-white text-black border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 transition-colors ease-in-out duration-300 text-center">
-                Iniciar Sesión
-              </Link>
-              <Link href="/login" className="bg-black text-white border-[1px] px-4 py-2 rounded-md hover:bg-slate-100 hover:text-black transition-colors ease-in-out duration-300 text-center">
-                Registrarse
-              </Link>
-              */}
-            </nav>
-          </SheetContent>
-        </Sheet>
+                */}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+        </div>
       </nav>
-    </div>
   )
 }
