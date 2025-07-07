@@ -23,8 +23,8 @@ const metroDF = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Solipsis AI",
-  description: "Transforma tus interacciones con tus clientes en insights con Solipsis.",
+  title: "Solipsis – IA para Espacios Físicos",
+  description: "Detecta marcas, emociones y patrones de tus clientes en tiempo real con visión computacional.",
   icons: {
     icon: [
       { url: '/icons/icon.png', sizes: 'any' },
